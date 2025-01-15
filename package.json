@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  },
+  "name": "curso-puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit --detectOpenHandles --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "puppeteer": "^24.1.0"
+  }
+}
