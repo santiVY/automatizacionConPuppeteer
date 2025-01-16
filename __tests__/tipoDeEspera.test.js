@@ -5,6 +5,7 @@ describe('Mostrar tipos de espera', () => {
         const browser = await puppeteer.launch({ 
             headless: false,
             defaultViewport: null,
+            slowMo: 200,
         });
         const page = await browser.newPage();
         await page.goto('https://platzi.com/', {waitUntil: 'networkidle2'});
@@ -13,6 +14,7 @@ describe('Mostrar tipos de espera', () => {
         const url = await page.url();
         console.log(url);
         await page.goto('https://demoqa.com/modal-dialogs', {waitUntil: 'networkidle0'});
+        await new Promise(resolve => setTimeout(resolve, 2000));
         //la propiedad visible espera hasta que realmente este en el DOM hidden sirve para ocultos
         await page.waitForSelector('#showSmallModal', {visible: true});
         

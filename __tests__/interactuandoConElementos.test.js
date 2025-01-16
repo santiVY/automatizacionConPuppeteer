@@ -4,7 +4,7 @@ describe('Interactuando con elementos', () => {
     it('Llenar formularios', async () => {
         const browser = await puppeteer.launch({ 
             headless: false,
-            slowMo : 20, 
+            slowMo : 0, 
             defaultViewport: null,
         });
         const page = await browser.newPage();
